@@ -1,0 +1,46 @@
+<view id="goods">
+	<view class="header">
+		<view class="header-shop">
+			<view class="header-shop-left">
+				<image class="img" :src="seller.avatar"></image>
+			</view>
+			<view class="header-shop-right">
+				<view class="shop-name">
+					<image style="height:36upx;width: 60upx;" src="../../static/img/brand@3x.png"></image>
+					<text class="name">{{seller.name}}</text>
+				</view>
+				<view class="shop-ways">{{seller.description}}</view>
+				<view class="shop-discount">
+					<view class="discount">
+						<image style="height:24upx;width: 24upx;" src="../../static/img/decrease_2@3x.png"></image>
+						<text class="discount-list" v-if="seller.supports && seller.supports.length">{{seller.supports[0].description}}</text>
+					</view>
+					<view class="discount-count">
+						<text>{{seller.supports.length}}</text>
+						<text>¸ö ></text>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="header-notice">
+			<image style="height:36upx;width: 60upx;" src="../../static/img/bulletin@3x.png"></image>
+			<text class="notice-text">{{seller.bulletin}}</text>
+		</view>
+	</view>
+	<view class="content"></view>
+	<view class="footer">
+		<view class="shop-img">
+			<view class="out-box">
+				<view class="inner-box">
+					 <view class="iconfont icon-gwc inner-gwc"></view>
+				</view>
+			</view>
+		</view>
+		<view class="total-money"></view>
+		<view class="footer-button">
+			<text>£¤</text>
+			<text>{{seller.minPrice}}</text>
+			<text>ÆðËÍ</text>
+		</view>
+	</view>
+</view>
